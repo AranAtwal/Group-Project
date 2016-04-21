@@ -22,3 +22,39 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2016-04-21 14:06:55.597
 !MESSAGE fatal: Could not switch to '/Applications/Xcode.app/Contents/Developer/usr/etc/': No such file or directory
 
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-04-21 14:09:39.195
+!MESSAGE An internal error occurred during: "Committing changes".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.dnd.DND.error(DND.java:292)
+	at org.eclipse.swt.dnd.DND.error(DND.java:238)
+	at org.eclipse.swt.dnd.Clipboard.<init>(Clipboard.java:57)
+	at org.eclipse.egit.ui.internal.components.RepositorySelectionPage.<init>(RepositorySelectionPage.java:329)
+	at org.eclipse.egit.ui.internal.components.RepositorySelectionPage.<init>(RepositorySelectionPage.java:386)
+	at org.eclipse.egit.ui.internal.push.AddRemotePage.<init>(AddRemotePage.java:39)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.<init>(PushBranchWizard.java:81)
+	at org.eclipse.egit.ui.internal.push.PushBranchWizard.<init>(PushBranchWizard.java:60)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.pushUpstream(CommitJob.java:179)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-04-21 14:12:50.698
+!MESSAGE An exception occurred during push on URI http://github.com/AranAtwal/Group-Project: http://github.com/AranAtwal/Group-Project: 301 Moved Permanently
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: http://github.com/AranAtwal/Group-Project: 301 Moved Permanently
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:164)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: http://github.com/AranAtwal/Group-Project: 301 Moved Permanently
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:502)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:379)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:155)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1250)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:157)
+	... 4 more
