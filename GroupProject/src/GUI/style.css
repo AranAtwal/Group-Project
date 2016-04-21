@@ -1,0 +1,12 @@
+.root {
+	-fx-background-color: linear-gradient(#aaaaaa, #333333)
+}
+
+.label {
+	-fx-font-size: 50px;
+	-fx-font-family: sans-serif;
+	
+}
+.button {
+	height: 10px;
+}
