@@ -6,7 +6,7 @@ public class BoardModel {
 	private int numPlayers;
 	private static Scanner userInput;
 	public BoardModel(int numPlayers) {
-		
+		int x = 0;
 		this.numPlayers = numPlayers;
 		players = new Player[numPlayers];
 
